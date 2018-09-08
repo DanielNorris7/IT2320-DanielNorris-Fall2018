@@ -1,8 +1,3 @@
-function Body() {
-    var x = document.getElementById("Body");
-    x.style.backgroundColor = "#00cc66";
-}
-
 function FirstElement() {
     var x = document.getElementById("FirstElement");
     x.style.color = "blue";
@@ -17,6 +12,12 @@ function ThirdElement() {
     var x = document.getElementById("ThirdElement")
     x.style.fontFamily = "TimesNewRoman";
     x.style.fontSize = "larger";
+}
+
+function PopulateName()
+{
+    document.querySelector('#FirstName').value='Chuck';
+    document.querySelector('#LastName').value='Norris';
 }
 
 function Name() {
@@ -39,5 +40,6 @@ function Footer() {
         "https://twitchy.com/"];
 
     var x = document.getElementById("Footer")
+    x.style.fontSize = "larger";
     x.innerHTML = newsSources;
 }

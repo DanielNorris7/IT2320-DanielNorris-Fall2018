@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" href="StyleSheet.css">
+
+    <title>DN Lab 2</title>
+    <meta name="description" content="Lab 2 Assignment: About Cleveland">
+    <meta name="Daniel Norris" content="SitePoint">
+
+</head>
+
+<body class="Body">
+    <header>
+        <h2 id="Title">Cleveland</h2>
+    </header>
+    <section>
+        <div class="Flex-Container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Places.html">Places</a>
+                <a href="History.html">History</a>
+                <a href="Lab2.html">Lab 2 Assignment</a>
+            </nav>
+        </div>
+    </section>
+    
+
+    <h2>Task 1: Change 3 elemetns on the Page.</h2>
+    <hr>
+    <p id="FirstElement">First elements color was changed by a script!</p>
+    <button onclick="FirstElement()">Change Color</button>
+
+    <p id="SecondElement"></p>
+    <button onclick="SecondElement()">Show Text</button>
+
+    <p id="ThirdElement">Third elements font and font size was changed by a script!</p>
+    <button onclick="ThirdElement()">Change Font Size and Font</button>
+    <br>
+    <br>
+
+    <h2>Task 2: Create an array that folds 3 news links and place them in the footer.</h2>
+    <hr>
+    <button onclick="Footer()">Show Latest New in Footer </button>
+    <br>
+    <br>
+
+
+    <h2>Task 3: Create 3 additional changes of our choice</h2>
+    <hr>
+
+    <button onclick="PopulateName()">Automatically Populate a Name</button>
+    <br>
+    <br> First name:<br>
+    <input type="text" name="firstname" id="FirstName"><br> Last name:<br>
+    <input type="text" name="lastname" id="LastName">
+    <br>
+    <br>
+
+    <button onclick="Name()">Combined Name</button>
+    <br>
+    <p id="FullName"></p>
+    <br>
+
+    <button onclick="Reload()">Reset Page</button>
+    <br>
+    <br>
+    <br>
+
+    <h2>Footer</h2>
+    <hr>
+
+    <hr>
+    <footer id="Footer">
+        <p>Cleveland: Founded in 1796</p>
+        <p>Mayor: Frank G. Jackson</p>
+    </footer>
+</body>
+
+</html>
