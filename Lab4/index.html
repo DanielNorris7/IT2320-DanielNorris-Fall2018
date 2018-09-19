@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+
+    <title>DN Lab 4</title>
+    <meta name="description" content="Lab 4 Assignment: JSON">
+    <meta name="Daniel Norris" content="SitePoint">
+
+</head>
+
+<body class="Body">
+    <div>
+        <h1>Questions about Ohio</h1>
+        <hr /><br />
+
+        <form onsubmit="return quiz_json(this);">
+            What is the state bird? <input type="text" name="bird" /><br />
+            Where was the first state capital? <input type="text" name="capital" /><br />
+            What year was Ohio established? <input type="text" name="established" /><br />
+            <input type="submit" value="See Ansers" />
+        </form>
+
+        <p id="output"></p>
+        <br />
+    </div>
+</body>
+
+</html>
