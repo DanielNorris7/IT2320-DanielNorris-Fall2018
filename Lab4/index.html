@@ -18,9 +18,24 @@
         <hr /><br />
 
         <form onsubmit="return quiz_json(this);">
-            What is the state bird? <input type="text" name="bird" /><br />
-            Where was the first state capital? <input type="text" name="capital" /><br />
-            What year was Ohio established? <input type="text" name="established" /><br />
+            What is the state bird? <br />
+            <input type="radio" name="bird" value="Cardinal" />Cardinal
+            <input type="radio" name="bird" value="Goldfinch" />Goldfinch
+            <input type="radio" name="bird" value="Turkey" />Turkey
+            <br />
+            <br />
+            Where was the first state capital? <br />
+            <input type="radio" name="capital" value="Columbus" />Columbus
+            <input type="radio" name="capital" value="Chillicothe" />Chillicothe
+            <input type="radio" name="capital" value="Athens" />Athens
+            <br />
+            <br />
+            What year was Ohio established? <br />
+            <input type="radio" name="established" value="1803"/>1803
+            <input type="radio" name="established" value="1776"/>1776
+            <input type="radio" name="established" value="1804"/>1804
+            <br />
+            <br />
             <input type="submit" value="See Ansers" />
         </form>
 
