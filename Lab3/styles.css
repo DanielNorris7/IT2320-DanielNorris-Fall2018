@@ -1,0 +1,12 @@
+.table{
+    border: 1px solid black;
+}
+
+.cell{
+    border: 1px solid black;
+    height: 80px;
+    width: 80px;
+    font-size: 40pt;
+    text-align: center;
+}
+

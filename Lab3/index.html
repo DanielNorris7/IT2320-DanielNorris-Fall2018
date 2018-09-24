@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>DN Lab 3</title>
+    <meta name="description" content="Lab 3 Assignment: TicTackToe">
+    <meta name="Daniel Norris" content="SitePoint">
+
+</head>
+
+<body class="Body" onload="HumanPlayer()">
+    <div>
+        <h1>Tic Tac Toe</h1>
+        <hr /><br />
+
+        <div>
+            <p id="output"></p>
+        </div>
+
+        <div>
+            <table class="table">
+                <tr>
+                    <td class="cell" id="0" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="1" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="2" onclick="MakeNextMove(this)"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="4" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="5" onclick="MakeNextMove(this)"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="7" onclick="MakeNextMove(this)"></td>
+                    <td class="cell" id="8" onclick="MakeNextMove(this)"></td>
+                </tr>
+            </table>
+        </div>
+
+        <button onclick="ResetBoard()">Reset</button>
+
+        <br />
+    </div>
+</body>
+
+</html>
