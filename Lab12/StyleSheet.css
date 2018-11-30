@@ -1,0 +1,163 @@
+.Body 
+{
+    background-image: linear-gradient(90deg, lightgrey, lightblue);
+}
+
+h2
+{
+    background-color: black;
+    color: #ffffff;
+    font-size: 30;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 3px 3px 7px orange;
+}
+
+li 
+{
+    float: left;
+    list-style-type: none;
+}
+
+li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 2px;
+}
+
+li :hover
+ {
+    background-color: darkgreen;    
+}
+
+#Corners 
+{
+    border-radius: 15px;
+    padding: 20px; 
+    width: 98%;
+    height: 100%; 
+} 
+
+.Flex-Container
+{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: lightgrey;
+}
+
+.col{
+
+    float: left;
+    padding: 30px;
+    width: 30%;
+    background-color: greenyellow;    
+    margin: 5px;
+}
+
+.col:hover{
+    background-color: yellow;
+    box-shadow: 6px 4px lightslategray;
+    font-weight: bold;
+}
+
+article 
+{
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+img 
+{
+    border: 1px solid #ccc;
+    height: 50px;
+    margin: 5px;
+    width: 50px;
+}
+
+img:hover
+{
+    transform: skewY(20deg);
+}
+
+footer
+{
+    text-align: center;    
+    font-size: 0.85em;
+    clear: both;
+    background-color: lightgrey;    
+    padding: 10px;
+    margin: 10px;
+}
+
+footer div
+{
+    text-decoration: none;
+    background-color: #111;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    color: #fff;  
+}
+
+footer div span
+{
+    display: block;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+        section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+    
+    .col
+    {
+        width: 10%;
+    }
+    #Footer
+    {
+        display: none;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .col
+    {
+        width: 100%;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .col
+    {
+        width: 60%;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .col
+    {      
+        width: 40%;        
+    }    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .col
+    {       
+        width: 15%;        
+    } 
+}
