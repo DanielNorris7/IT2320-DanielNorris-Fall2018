@@ -5,7 +5,7 @@
 
 h2
 {
-    background-color: black;
+    background-color: lightgray;
     color: #ffffff;
     font-size: 30;
     padding: 15px;
@@ -37,10 +37,11 @@ li :hover
 
 #Corners 
 {
-    border-radius: 15px;
-    padding: 20px; 
-    width: 98%;
-    height: 100%; 
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
 } 
 
 .Flex-Container
@@ -48,21 +49,6 @@ li :hover
     display: flex;
     flex-wrap: nowrap;
     background-color: lightgrey;
-}
-
-.col{
-
-    float: left;
-    padding: 30px;
-    width: 30%;
-    background-color: greenyellow;    
-    margin: 5px;
-}
-
-.col:hover{
-    background-color: yellow;
-    box-shadow: 6px 4px lightslategray;
-    font-weight: bold;
 }
 
 article 
@@ -87,24 +73,32 @@ img:hover
     transform: skewY(20deg);
 }
 
+div
+{
+    word-wrap: break-word;
+}
+
 footer
 {
-    text-align: center;    
-    font-size: 0.85em;
-    clear: both;
-    background-color: lightgrey;    
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
     padding: 10px;
-    margin: 10px;
 }
 
 footer div
 {
     text-decoration: none;
-    background-color: #111;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 5px;
-    color: #fff;  
+    background-color: lightgray;
+    padding: .5em;
+    color: white;  
+
+    /* -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px; */
 }
 
 footer div span
@@ -114,15 +108,14 @@ footer div span
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-        section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-    
+@media only screen and (max-width: 600px) 
+{ 
     .col
     {
-        width: 10%;
+        width: 5%;
+        float: left;
+        padding: 30px;  
+        margin: 5px;
     }
     #Footer
     {
@@ -131,33 +124,212 @@ footer div span
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px)
+{
     .col
     {
-        width: 100%;
+        width: 20%;
+        float: left;
+        padding: 30px;  
+        margin: 5px;
+    }
+    .col:hover
+    {
+        background-color: darkgreen;
+        box-shadow: 6px 4px darkgreen;
+        font-weight: bold;
     }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
     .col
     {
-        width: 60%;
+        width: 35%;
     }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
     .col
     {      
-        width: 40%;        
+        width: 60%;        
     }    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) 
+{
     .col
     {       
         width: 15%;        
     } 
 }
+
+
+
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+ /* body
+ {
+   margin: 0;
+   padding: 0;
+   
+   /* make it look decent enough */
+   background: #232323;
+   color: #cdcdcd;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+ }
+ 
+ a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ a:hover
+ {
+   color: tomato;
+ } */
+ 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 50px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
