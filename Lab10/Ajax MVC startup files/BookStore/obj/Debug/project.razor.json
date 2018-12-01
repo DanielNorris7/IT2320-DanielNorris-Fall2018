@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\CourseWork\\IT2320-JS\\IT2320-DanielNorris-Fall2018\\Lab10\\Ajax MVC startup files\\BookStore\\BookStore.csproj",
+  "TargetFramework": "v4.6.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
