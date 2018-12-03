@@ -26,28 +26,42 @@
             <div id="breedresults">Results</div>
             <br>
         </section>
-        <section>
+        <section id="findAPet">
             <header>PetFinder Find Pet</header>
             Animal: <br>
-            <input id="animal" type="text"> <br>
+            <select id="animal" type="text"> 
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="horse">Horse</option>
+                <option value="barnyard">Barnyard</option>    
+            </select> <br>
             Breed: <br>
             <input id="breed" type="text"> <br>
             Size: <br>
-            <input id="size" type="text"> <br>
+            <select id="size" type="text"> 
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra-Large</option>
+            </select> <br>
             Sex: <br>
-            <input id="sex" type="text"> <br>
-            Location: <br>
-            <input id="location" type="text"> <br>
+            <select id="sex" type="text"> 
+            <option value="M">Male</option>
+            <option value="F">Female</option>    
+            </select><br>
+            Zip Code: <br>
+            <input id="location" type="number" required> <br>
             Age: <br>
-            <input id="age" type="text"> <br>
-            Count: <br>
-            <input id="count" type="number"> <br>
-            Offset: <br>
-            <input id="offset" type="text"> <br>
+            <select id="age" type="text"> 
+            <option value="Baby">Baby</option>
+            <option value="Young">Young</option>
+            <option value="Adult">Adult</option>
+            <option value="Senior">Senior</option>    
+            </select><br>
             <br>
             <button id="findPetBtn">Find Pet</button>
-            <div id="petResults">Results</div>
-            <br>
+            <div id="petResults">Results</div> 
+            <br> 
         </section>
     </article>
     <footer>

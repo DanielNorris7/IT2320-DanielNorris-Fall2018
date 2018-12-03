@@ -2,3 +2,19 @@ footer
 {
     display: none;
 }
+
+#location:required
+{
+    background-color: yellow;
+}
+
+#findAPet
+{
+    padding: 5px;
+    background-color: lightgray;
+}
+
+li 
+{
+    text-overflow: initial;
+}

@@ -55,36 +55,25 @@ $(function(){
     $("#findPetBtn").on("click", function(){        
         const apiKey = "551b527add03634ac3a95a7a967367e6";
 
+        // Values will only be added to the array if the value is NOT ""
+        // Keeps unneed parameters out of the query URL
         var queryParam = [];
 
-        var animalValue = $("#animal").val() !== "" ? queryParam.push("&animal="+animalValue) : null;
+        $("#animal").val() != "" ? queryParam.push("&animal="+$("#animal").val()) : "";
 
-        var breedValue = $("#breed").val() !== "" ? queryParam.push("&breed="+breedValue) : null; 
+        $("#breed").val() != "" ? queryParam.push("&breed="+$("#breed").val()) : ""; 
 
-        var sizeValue = $("#size").val() !== "" ? queryParam.push("&size="+sizeValue) : null;
+        $("#size").val() != "" ? queryParam.push("&size="+$("#size").val()) : "";
 
-        var sexValue = $("#sex").val() !== "" ? queryParam.push("&sex="+sexValue) : null;
+        $("#sex").val() != "" ? queryParam.push("&sex="+$("#sex").val()) : "";
 
-        var locationValue = $("#location").val() !== "" ? queryParam.push("&location="+locationValue) : null; 
+        $("#location").val() != "" ? queryParam.push("&location="+$("#location").val()) : ""; 
 
-        var ageValue = $("#age").val() !== "" ? queryParam.push("&age="+ageValue) : null;
-
-        var offsetValue = $("#offset").val() !== "" ? offsetValue : "baisc";
-        // Defines the default value if one isn't present and adds it to the array
-        // PetFinders API defaults the offset value to basic for the pet.find method
-        queryParam.push("&offset="+offsetValue);
-
-        var countValue = $("#count").val() !== "" ? countValue : 25;
-        // Defines the default value if one isn't present and adds it to the array 
-        // PetFinders API defaults the count value to 25 and adds it to the array
-        queryParam.push("&count="+countValue);
+        $("#age").val() != "" ? queryParam.push("&age="+$("#age").val()) : "";
 
         console.log(queryParam.values);
 
-        //var queryString = "&animal="+animalValue+"?&breed="+breedValue+"?&size="+sizeValue+"?&sex="+sexValue+"?&location="+locationValue+"?&age="+ageValue+"?&count="+countValue+"?&offset="+offsetValue;
-
         var url = "http://api.petfinder.com/pet.find?format=json&key="+apiKey+"&callback=?"+queryParam.join("")+"&format=json";
-        //var url = "http://api.petfinder.com/pet.find?format=json&key="+apiKey+"&callback=?"+queryString+"&format=json";
        
         $.ajax({
            url: url,           
@@ -92,16 +81,18 @@ $(function(){
            dataType: "jsonp",   //needed for CORS       
            contentType: "application/json; charset=utf-8",
            crossDomain: true,                   
-           success: function(data){              
+           success: function(data)
+           {              
               console.log(data);            
-            //   $("ul").remove();
-            //   var ul = $("<ul>Breeds</ul>");
-            //   $("#petResults").after(ul);
+              $("ul").remove();
+              var ul = $("<ul>Pets</ul>");
+              $("#petResults").after(ul);
               
-            //   $.each(data.petfinder.breeds.breed,function(i,breed){                  
-            //         var li = $("<li></li>").text(breed.$t);
-            //         $("ul").append(li);
-            //   });                      
+              $.each(data.petfinder.pets.pet,function(i,pet)
+              {                  
+                    var li = $("<li></li>").text(pet.name.$t).text(pet.description.$t);
+                    $("ul").append(li);
+              });                      
             }                     
 
          });//ajax  
