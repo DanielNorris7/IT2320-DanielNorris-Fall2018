@@ -1,0 +1,46 @@
+footer 
+{
+    display: none;
+}
+
+#location:required
+{
+    background-color: yellow;
+}
+
+#localShelterZip:required
+{
+    background-color: yellow;
+}
+
+#findAPet
+{
+    padding: 5px;
+    background-color: lightgray;
+}
+
+li 
+{
+    text-overflow: initial;
+}
+
+#findLocalShelter
+{
+    padding: 5px;
+    background-color: lightgreen;
+}
+
+article 
+{
+    margin : 5px;
+}
+
+#localShelters
+{
+    display : none;
+}
+
+#petResults
+{
+    display : none; 
+}
