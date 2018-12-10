@@ -284,7 +284,8 @@ function drawRoundedSquare()
     // Top / top-right corner
     ctx.moveTo(10, 10);
     ctx.lineTo(100, 10);
-    ctx.quadraticCurveTo(100, 20, 100, 20);
+    ctx.arcTo(100,20,100,70,50);
+    //ctx.quadraticCurveTo(100, 20, 100, 20);
     
     // Right / bottom-right corner
     ctx.lineTo(100, 100);
