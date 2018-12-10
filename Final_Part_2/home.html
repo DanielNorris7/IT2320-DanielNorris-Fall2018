@@ -19,6 +19,7 @@
             <div id="flikrresults">Results</div>
             <br>
         </section>
+
         <section>
             <header>PetFinder Public Feed</header>
             <input id="breedsearch" type="text">
@@ -26,6 +27,7 @@
             <div id="breedresults">Results</div>
             <br>
         </section>
+        
         <section id="findAPet">
             <header>PetFinder Find Pet</header>
             Animal: <br>
@@ -63,9 +65,7 @@
             <div id="petResults">Results</div> 
             <br> 
         </section>
-    </article>
-
-    <article>
+        
         <section id="findLocalShelter"> 
             <header>Find A Local Shelter from PetFinder</header>
             ZipCode: <br>
@@ -73,6 +73,37 @@
             <br>
             <button id="findlocalShlterBtn">Find Local Shelter</button>
             <div id="localShelters">Local Shelters: </div> 
+        </section>
+        
+        <section id="findPetInShelter">
+            <header>Find the Pets in a Shelter</header>
+            Shelter Id: <br>
+            (Hint: The Shelter Id can be found from the Find Local Sheleter above.) <br>
+            <br>
+            <input id="localShelterId" type="text" required> <br>
+            <br>
+            <button id="findPetInShelterBtn"> Find Pets in Shelter</button>
+            <div id="localPet">Pets in Local Shelter: </div> 
+        </section>
+        
+        <section id="findABreed">
+            <header>PetFinder Find Pet by Breed</header>
+            Animal: <br>
+            <select id="animalBreed" type="text"> 
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="horse">Horse</option>
+                <option value="barnyard">Barnyard</option>    
+            </select> <br>
+            Breed: <br>
+            <input id="findByBreed" type="text" required> <br>
+            <br>
+            <button id="breedListBtn">List of Breeds</button>
+            <div id="breedResults">Breeds: </div> 
+            <br>
+            <button id="findListOfBreedsBtn">Find Breeds</button>
+            <div id="listOfBreedResults">Results</div> 
+            <br> 
         </section>
     </article>
     <footer>
